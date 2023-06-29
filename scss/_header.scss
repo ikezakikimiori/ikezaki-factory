@@ -1,0 +1,37 @@
+@use 'variables'as *;
+@use 'mixin' as *;
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    height: 120px;
+    padding-right: 200px;
+    position:fixed;
+    @include mq(sp){
+        justify-content: center;
+        padding: 0 30px;
+    }
+
+    &-nav{
+        justify-content: flex-end;
+        &--menu{
+            display: flex;
+
+            &__link{
+                margin: 40px;
+            }
+        }
+        @include mq(sp){
+            display: none;
+        }
+    }
+
+    .fa-icon{
+        color: $main;
+        font-size: 32px;
+        
+    }
+
+
+}

@@ -1,0 +1,132 @@
+@use 'variables' as *;
+@use 'mixin' as *;
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: $lora, $serif, $sans, serif;
+    // color: $main;
+    background-color: rgb(238, 236, 236);
+}
+
+h1{
+    font-size: 60px;
+    padding: 36px 0;
+    color: $main;
+}
+
+h2{
+    font-size: 36px;
+    color: $main;
+}
+
+h3{
+    font-size: 24px;
+    @include mq(sp){
+        font-size: 20px;
+    }
+}
+
+h4{
+    font-size: 18px;
+}
+
+p{
+    font-size: 14px;
+}
+
+span{
+    display: inline-block;
+    font-size: 16px;
+}
+
+li{
+    list-style: none;
+}
+
+.fa-instagram {
+    font-size: 20px;
+}
+
+.section{
+    padding: 180px 0;
+    @include mq(sp){
+        padding: 90px 0;
+    }
+
+    &-top{
+        padding: 100px 0 180px;
+    }
+
+    &-head{
+
+        &--media{
+            margin: 50px 0;
+
+            display: flex;
+            @include mq(sp){
+                display: inline-block;
+            }
+
+            &--text{
+                margin: 40px 0;
+                line-height: 36px;
+                }
+
+            
+        }
+        &--mark{
+                margin: auto;
+                
+                .fa-brands{
+                    font-size: 60px;
+                }
+
+                .web-rogo{
+                    width: 65px;
+                    height: 65px;
+                }
+
+                }  
+        
+    }
+
+    &-article{
+
+        &__text{
+
+            line-height: 36px;
+        }
+    }
+}
+
+.contents-container{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    @include mq(sp){
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    // &--wide{
+    //     width: 100%;
+    //     max-width: initial;
+    //     @include mq(sp){
+    //         padding: 0;
+    //     }
+    // }
+}
+
+.pc-none{
+    display: none;
+    @include mq(sp){
+        display: block;
+    }
+}
+
+// -----------------------------
